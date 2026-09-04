@@ -1207,12 +1207,25 @@ bookingForm.addEventListener(
 
         }
 
+        // Guarda o horário antes de limpar o formulário
+        const horarioAgendado = selectedTime;
+
+        // Guarda a data antes de limpar o formulário
+        const dataAgendada = bookingDate.value;
+
+        // Salva o agendamento
         confirmarAgendamento();
 
+        // Abre o WhatsApp
         enviarWhatsApp();
 
-        bloquearHorarioSelecionado();
+        // Limpa o formulário
+        resetarFormulario();
 
+        // Mantém o horário salvo como indisponível
+        atualizarDisponibilidade();
+
+        // Atualiza o resumo
         atualizarResumo();
 
         mostrarConfirmacao();
