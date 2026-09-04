@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Agendamento online para barbearia. Escolha seu serviço, data, horário e envie o agendamento diretamente pelo WhatsApp."
+    >
+
+    <title>Tech Barber | Agendamento Online</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+    <div class="background-grid"></div>
+
+    <main class="app-container">
+
+        <!-- ======================================================
+             CABEÇALHO
+        ======================================================= -->
+
+        <header class="header">
+
+            <div class="logo-area">
+
+                <span class="logo-icon">
+                    ✂
+                </span>
+
+                <div>
+                    <h1>TECH BARBER</h1>
+                    <p>Agendamento inteligente</p>
+                </div>
+
+            </div>
+
+            <div class="status-system">
+
+                <span class="status-dot"></span>
+
+                <span>Sistema online</span>
+
+            </div>
+
+        </header>
+
+
+        <!-- ======================================================
+             HERO
+        ======================================================= -->
+
+        <section class="hero">
+
+            <span class="hero-tag">
+                BARBEARIA • ESTILO • TECNOLOGIA
+            </span>
+
+            <h2>
+                Seu estilo começa
+                <span>aqui.</span>
+            </h2>
+
+            <p>
+                Escolha seu atendimento, serviço, data e horário.
+                Finalize seu agendamento diretamente pelo WhatsApp.
+            </p>
+
+        </section>
+
+
+        <!-- ======================================================
+             FORMULÁRIO PRINCIPAL
+        ======================================================= -->
+
+        <section class="booking-card">
+
+            <form id="bookingForm">
+
+
+                <!-- ==================================================
+                     TIPO DE ATENDIMENTO
+                =================================================== -->
+
+                <section class="booking-section">
+
+                    <div class="section-header">
+
+                        <span class="section-number">
+                            01
+                        </span>
+
+                        <div>
+                            <h3>Tipo de atendimento</h3>
+                            <p>Onde deseja ser atendido?</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="attendance-grid">
+
+                        <label class="attendance-card active">
+
+                            <input
+                                type="radio"
+                                name="atendimento"
+                                value="barbearia"
+                                checked
+                            >
+
+                            <span class="attendance-icon">
+                                ✂
+                            </span>
+
+                            <div>
+                                <strong>
+                                    Na barbearia
+                                </strong>
+
+                                <small>
+                                    Atendimento em nossa unidade
+                                </small>
+                            </div>
+
+                        </label>
+
+
+                        <label class="attendance-card">
+
+                            <input
+                                type="radio"
+                                name="atendimento"
+                                value="domicilio"
+                            >
+
+                            <span class="attendance-icon">
+                                ⌂
+                            </span>
+
+                            <div>
+                                <strong>
+                                    Em domicílio
+                                </strong>
+
+                                <small>
+                                    Atendimento no seu endereço
+                                </small>
+                            </div>
+
+                        </label>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ==================================================
+                     SERVIÇOS
+                =================================================== -->
+
+                <section class="booking-section">
+
+                    <div class="section-header">
+
+                        <span class="section-number">
+                            02
+                        </span>
+
+                        <div>
+                            <h3>Escolha seu serviço</h3>
+                            <p>
+                                Selecione uma das opções disponíveis.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="services-grid"
+                        id="servicesGrid"
+                    >
+
+                        <label class="service-card">
+
+                            <input
+                                type="radio"
+                                name="servico"
+                                value="Corte Masculino"
+                                data-barbearia="45"
+                                data-domicilio="80"
+                            >
+
+                            <div class="service-info">
+
+                                <span class="service-icon">
+                                    ✂
+                                </span>
+
+                                <div>
+                                    <strong>
+                                        Corte Masculino
+                                    </strong>
+
+                                    <small>
+                                        Corte personalizado
+                                    </small>
+                                </div>
+
+                            </div>
+
+                            <span class="service-price">
+                                R$ 45
+                            </span>
+
+                        </label>
+
+
+                        <label class="service-card">
+
+                            <input
+                                type="radio"
+                                name="servico"
+                                value="Barba"
+                                data-barbearia="35"
+                                data-domicilio="70"
+                            >
+
+                            <div class="service-info">
+
+                                <span class="service-icon">
+                                    ◈
+                                </span>
+
+                                <div>
+                                    <strong>
+                                        Barba
+                                    </strong>
+
+                                    <small>
+                                        Modelagem e acabamento
+                                    </small>
+                                </div>
+
+                            </div>
+
+                            <span class="service-price">
+                                R$ 35
+                            </span>
+
+                        </label>
+
+
+                        <label class="service-card">
+
+                            <input
+                                type="radio"
+                                name="servico"
+                                value="Corte + Barba"
+                                data-barbearia="70"
+                                data-domicilio="120"
+                            >
+
+                            <div class="service-info">
+
+                                <span class="service-icon">
+                                    ⚡
+                                </span>
+
+                                <div>
+                                    <strong>
+                                        Corte + Barba
+                                    </strong>
+
+                                    <small>
+                                        Combo completo
+                                    </small>
+                                </div>
+
+                            </div>
+
+                            <span class="service-price">
+                                R$ 70
+                            </span>
+
+                        </label>
+
+
+                        <label class="service-card">
+
+                            <input
+                                type="radio"
+                                name="servico"
+                                value="Pezinho"
+                                data-barbearia="20"
+                                data-domicilio="50"
+                            >
+
+                            <div class="service-info">
+
+                                <span class="service-icon">
+                                    ◆
+                                </span>
+
+                                <div>
+                                    <strong>
+                                        Pezinho
+                                    </strong>
+
+                                    <small>
+                                        Acabamento e contorno
+                                    </small>
+                                </div>
+
+                            </div>
+
+                            <span class="service-price">
+                                R$ 20
+                            </span>
+
+                        </label>
+
+
+                        <label class="service-card">
+
+                            <input
+                                type="radio"
+                                name="servico"
+                                value="Sobrancelha"
+                                data-barbearia="20"
+                                data-domicilio="50"
+                            >
+
+                            <div class="service-info">
+
+                                <span class="service-icon">
+                                    ◉
+                                </span>
+
+                                <div>
+                                    <strong>
+                                        Sobrancelha
+                                    </strong>
+
+                                    <small>
+                                        Design masculino
+                                    </small>
+                                </div>
+
+                            </div>
+
+                            <span class="service-price">
+                                R$ 20
+                            </span>
+
+                        </label>
+
+
+                        <label class="service-card">
+
+                            <input
+                                type="radio"
+                                name="servico"
+                                value="Corte Infantil"
+                                data-barbearia="40"
+                                data-domicilio="75"
+                            >
+
+                            <div class="service-info">
+
+                                <span class="service-icon">
+                                    ★
+                                </span>
+
+                                <div>
+                                    <strong>
+                                        Corte Infantil
+                                    </strong>
+
+                                    <small>
+                                        Até 12 anos
+                                    </small>
+                                </div>
+
+                            </div>
+
+                            <span class="service-price">
+                                R$ 40
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ==================================================
+                     DATA
+                =================================================== -->
+
+                <section class="booking-section">
+
+                    <div class="section-header">
+
+                        <span class="section-number">
+                            03
+                        </span>
+
+                        <div>
+                            <h3>Escolha o dia</h3>
+                            <p>
+                                Selecione a data desejada.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="date-container">
+
+                        <label for="bookingDate">
+                            Data do atendimento
+                        </label>
+
+                        <input
+                            type="date"
+                            id="bookingDate"
+                            name="data"
+                            required
+                        >
+
+                    </div>
+
+                </section>
+
+
+                <!-- ==================================================
+                     HORÁRIOS
+                =================================================== -->
+
+                <section class="booking-section">
+
+                    <div class="section-header">
+
+                        <span class="section-number">
+                            04
+                        </span>
+
+                        <div>
+                            <h3>Escolha o horário</h3>
+
+                            <p>
+                                Horários disponíveis para atendimento.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="schedule-grid"
+                        id="scheduleGrid"
+                    >
+
+                        <button
+                            type="button"
+                            class="time-button"
+                            data-time="08:00"
+                        >
+                            08:00
+                        </button>
+
+                        <button
+                            type="button"
+                            class="time-button"
+                            data-time="09:00"
+                        >
+                            09:00
+                        </button>
+
+                        <button
+                            type="button"
+                            class="time-button"
+                            data-time="10:00"
+                        >
+                            10:00
+                        </button>
+
+                        <button
+                            type="button"
+                            class="time-button"
+                            data-time="11:00"
+                        >
+                            11:00
+                        </button>
+
+                        <button
+                            type="button"
+                            class="time-button"
+                            data-time="12:00"
+                        >
+                            12:00
+                        </button>
+
+                        <button
+                            type="button"
+                            class="time-button"
+                            data-time="13:00"
+                        >
+                            13:00
+                        </button>
+
+                        <button
+                            type="button"
+                            class="time-button"
+                            data-time="14:00"
+                        >
+                            14:00
+                        </button>
+
+                        <button
+                            type="button"
+                            class="time-button"
+                            data-time="15:00"
+                        >
+                            15:00
+                        </button>
+
+                        <button
+                            type="button"
+                            class="time-button"
+                            data-time="16:00"
+                        >
+                            16:00
+                        </button>
+
+                        <button
+                            type="button"
+                            class="time-button"
+                            data-time="17:00"
+                        >
+                            17:00
+                        </button>
+
+                        <button
+                            type="button"
+                            class="time-button"
+                            data-time="18:00"
+                        >
+                            18:00
+                        </button>
+
+                        <button
+                            type="button"
+                            class="time-button"
+                            data-time="19:00"
+                        >
+                            19:00
+                        </button>
+
+                        <button
+                            type="button"
+                            class="time-button"
+                            data-time="20:00"
+                        >
+                            20:00
+                        </button>
+
+                        <button
+                            type="button"
+                            class="time-button"
+                            data-time="21:00"
+                        >
+                            21:00
+                        </button>
+
+                    </div>
+
+
+                    <div class="schedule-legend">
+
+                        <span>
+                            <i class="available"></i>
+                            Disponível
+                        </span>
+
+                        <span>
+                            <i class="selected"></i>
+                            Selecionado
+                        </span>
+
+                        <span>
+                            <i class="unavailable"></i>
+                            Indisponível
+                        </span>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ==================================================
+                     DADOS DO CLIENTE
+                =================================================== -->
+
+                <section class="booking-section">
+
+                    <div class="section-header">
+
+                        <span class="section-number">
+                            05
+                        </span>
+
+                        <div>
+                            <h3>Seus dados</h3>
+
+                            <p>
+                                Precisamos dessas informações para confirmar
+                                seu horário.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+
+                            <label for="clientName">
+                                Nome completo
+                            </label>
+
+                            <input
+                                type="text"
+                                id="clientName"
+                                placeholder="Digite seu nome"
+                                autocomplete="name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="clientPhone">
+                                WhatsApp
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="clientPhone"
+                                placeholder="(27) 998662834"
+                                autocomplete="tel"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ENDEREÇO MOSTRADO SOMENTE EM DOMICÍLIO -->
+
+                    <div
+                        class="address-area hidden"
+                        id="addressArea"
+                    >
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+
+                                <label for="clientAddress">
+                                    Endereço
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="clientAddress"
+                                    placeholder="Rua, número e bairro"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="reference">
+                                    Referência
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="reference"
+                                    placeholder="Ponto de referência"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="observation">
+                            Observações
+                        </label>
+
+                        <textarea
+                            id="observation"
+                            rows="4"
+                            placeholder="Alguma observação sobre o atendimento?"
+                        ></textarea>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ==================================================
+                     RESUMO
+                =================================================== -->
+
+                <section class="summary-card">
+
+                    <div class="summary-header">
+
+                        <div>
+
+                            <span class="summary-label">
+                                RESUMO DO AGENDAMENTO
+                            </span>
+
+                            <h3>
+                                Confira seu atendimento
+                            </h3>
+
+                        </div>
+
+                        <span class="summary-status">
+                            AGUARDANDO
+                        </span>
+
+                    </div>
+
+
+                    <div class="summary-grid">
+
+                        <div class="summary-item">
+
+                            <span>Atendimento</span>
+
+                            <strong id="summaryAttendance">
+                                Na barbearia
+                            </strong>
+
+                        </div>
+
+
+                        <div class="summary-item">
+
+                            <span>Serviço</span>
+
+                            <strong id="summaryService">
+                                Não selecionado
+                            </strong>
+
+                        </div>
+
+
+                        <div class="summary-item">
+
+                            <span>Data</span>
+
+                            <strong id="summaryDate">
+                                --
+                            </strong>
+
+                        </div>
+
+
+                        <div class="summary-item">
+
+                            <span>Horário</span>
+
+                            <strong id="summaryTime">
+                                --
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="summary-total">
+
+                        <span>
+                            Valor do atendimento
+                        </span>
+
+                        <strong id="summaryPrice">
+                            R$ 0,00
+                        </strong>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="whatsapp-button"
+                    >
+
+                        <span class="whatsapp-icon">
+                            ◉
+                        </span>
+
+                        <span>
+                            AGENDAR PELO WHATSAPP
+                        </span>
+
+                    </button>
+
+
+                    <p class="summary-info">
+
+                        Ao clicar no botão, você será direcionado para o
+                        WhatsApp com todas as informações do agendamento.
+
+                    </p>
+
+                </section>
+
+            </form>
+
+        </section>
+
+
+        <!-- ======================================================
+             TABELA DE PREÇOS
+        ======================================================= -->
+
+        <section class="price-section">
+
+            <div class="price-title">
+
+                <span>PREÇOS</span>
+
+                <h2>
+                    Tabela de serviços
+                </h2>
+
+                <p>
+                    Consulte os valores para atendimento na barbearia
+                    ou em domicílio.
+                </p>
+
+            </div>
+
+
+            <div class="price-table">
+
+                <div class="price-table-header">
+
+                    <span>Serviço</span>
+
+                    <span>Barbearia</span>
+
+                    <span>Domicílio</span>
+
+                </div>
+
+
+                <div class="price-row">
+
+                    <strong>
+                        Corte Masculino
+                    </strong>
+
+                    <span>
+                        R$ 45
+                    </span>
+
+                    <span>
+                        R$ 80
+                    </span>
+
+                </div>
+
+
+                <div class="price-row">
+
+                    <strong>
+                        Barba
+                    </strong>
+
+                    <span>
+                        R$ 35
+                    </span>
+
+                    <span>
+                        R$ 70
+                    </span>
+
+                </div>
+
+
+                <div class="price-row">
+
+                    <strong>
+                        Corte + Barba
+                    </strong>
+
+                    <span>
+                        R$ 70
+                    </span>
+
+                    <span>
+                        R$ 120
+                    </span>
+
+                </div>
+
+
+                <div class="price-row">
+
+                    <strong>
+                        Pezinho
+                    </strong>
+
+                    <span>
+                        R$ 20
+                    </span>
+
+                    <span>
+                        R$ 50
+                    </span>
+
+                </div>
+
+
+                <div class="price-row">
+
+                    <strong>
+                        Sobrancelha
+                    </strong>
+
+                    <span>
+                        R$ 20
+                    </span>
+
+                    <span>
+                        R$ 50
+                    </span>
+
+                </div>
+
+
+                <div class="price-row">
+
+                    <strong>
+                        Corte Infantil
+                    </strong>
+
+                    <span>
+                        R$ 40
+                    </span>
+
+                    <span>
+                        R$ 75
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================================================
+             RODAPÉ
+        ======================================================= -->
+
+        <footer class="footer">
+
+            <div>
+
+                <strong>
+                    TECH BARBER
+                </strong>
+
+                <p>
+                    Seu estilo. Nossa tecnologia.
+                </p>
+
+            </div>
+
+
+            <span>
+                © <span id="currentYear"></span> Todos os direitos reservados.
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
