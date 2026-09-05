@@ -4,35 +4,21 @@
 <head>
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="description"
-        content="Agendamento online para barbearia. Escolha seu serviço, data, horário e envie o agendamento diretamente pelo WhatsApp."
-    >
+    <meta name="description"
+        content="Agendamento online para barbearia. Escolha seu serviço, data, horário e envie o agendamento diretamente pelo WhatsApp.">
 
     <title>Tech Barber | Agendamento Online</title>
 
     <link rel="stylesheet" href="style.css">
 
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap"
-        rel="stylesheet"
-    >
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -60,6 +46,7 @@
 
             </div>
 
+
             <div class="status-system">
 
                 <span class="status-dot"></span>
@@ -67,6 +54,15 @@
                 <span>Sistema online</span>
 
             </div>
+            <button type="button" class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+                <span class="theme-icon" id="themeIcon">
+                    ☀
+                </span>
+
+                <span class="theme-text" id="themeText">
+                    Dia
+                </span>
+            </button>
 
         </header>
 
@@ -127,12 +123,7 @@
 
                         <label class="attendance-card active">
 
-                            <input
-                                type="radio"
-                                name="atendimento"
-                                value="barbearia"
-                                checked
-                            >
+                            <input type="radio" name="atendimento" value="barbearia" checked>
 
                             <span class="attendance-icon">
                                 ✂
@@ -153,11 +144,7 @@
 
                         <label class="attendance-card">
 
-                            <input
-                                type="radio"
-                                name="atendimento"
-                                value="domicilio"
-                            >
+                            <input type="radio" name="atendimento" value="domicilio">
 
                             <span class="attendance-icon">
                                 ⌂
@@ -202,20 +189,12 @@
                     </div>
 
 
-                    <div
-                        class="services-grid"
-                        id="servicesGrid"
-                    >
+                    <div class="services-grid" id="servicesGrid">
 
                         <label class="service-card">
 
-                            <input
-                                type="radio"
-                                name="servico"
-                                value="Corte Masculino"
-                                data-barbearia="45"
-                                data-domicilio="80"
-                            >
+                            <input type="radio" name="servico" value="Corte Masculino" data-barbearia="45"
+                                data-domicilio="80">
 
                             <div class="service-info">
 
@@ -244,13 +223,7 @@
 
                         <label class="service-card">
 
-                            <input
-                                type="radio"
-                                name="servico"
-                                value="Barba"
-                                data-barbearia="35"
-                                data-domicilio="70"
-                            >
+                            <input type="radio" name="servico" value="Barba" data-barbearia="35" data-domicilio="70">
 
                             <div class="service-info">
 
@@ -279,13 +252,8 @@
 
                         <label class="service-card">
 
-                            <input
-                                type="radio"
-                                name="servico"
-                                value="Corte + Barba"
-                                data-barbearia="70"
-                                data-domicilio="120"
-                            >
+                            <input type="radio" name="servico" value="Corte + Barba" data-barbearia="70"
+                                data-domicilio="120">
 
                             <div class="service-info">
 
@@ -314,13 +282,7 @@
 
                         <label class="service-card">
 
-                            <input
-                                type="radio"
-                                name="servico"
-                                value="Pezinho"
-                                data-barbearia="20"
-                                data-domicilio="50"
-                            >
+                            <input type="radio" name="servico" value="Pezinho" data-barbearia="20" data-domicilio="50">
 
                             <div class="service-info">
 
@@ -349,13 +311,8 @@
 
                         <label class="service-card">
 
-                            <input
-                                type="radio"
-                                name="servico"
-                                value="Sobrancelha"
-                                data-barbearia="20"
-                                data-domicilio="50"
-                            >
+                            <input type="radio" name="servico" value="Sobrancelha" data-barbearia="20"
+                                data-domicilio="50">
 
                             <div class="service-info">
 
@@ -384,13 +341,8 @@
 
                         <label class="service-card">
 
-                            <input
-                                type="radio"
-                                name="servico"
-                                value="Corte Infantil"
-                                data-barbearia="40"
-                                data-domicilio="75"
-                            >
+                            <input type="radio" name="servico" value="Corte Infantil" data-barbearia="40"
+                                data-domicilio="75">
 
                             <div class="service-info">
 
@@ -449,12 +401,7 @@
                             Data do atendimento
                         </label>
 
-                        <input
-                            type="date"
-                            id="bookingDate"
-                            name="data"
-                            required
-                        >
+                        <input type="date" id="bookingDate" name="data" required>
 
                     </div>
 
@@ -484,120 +431,61 @@
                     </div>
 
 
-                    <div
-                        class="schedule-grid"
-                        id="scheduleGrid"
-                    >
+                    <div class="schedule-grid" id="scheduleGrid">
 
-                        <button
-                            type="button"
-                            class="time-button"
-                            data-time="08:00"
-                        >
+                        <button type="button" class="time-button" data-time="08:00">
                             08:00
                         </button>
 
-                        <button
-                            type="button"
-                            class="time-button"
-                            data-time="09:00"
-                        >
+                        <button type="button" class="time-button" data-time="09:00">
                             09:00
                         </button>
 
-                        <button
-                            type="button"
-                            class="time-button"
-                            data-time="10:00"
-                        >
+                        <button type="button" class="time-button" data-time="10:00">
                             10:00
                         </button>
 
-                        <button
-                            type="button"
-                            class="time-button"
-                            data-time="11:00"
-                        >
+                        <button type="button" class="time-button" data-time="11:00">
                             11:00
                         </button>
 
-                        <button
-                            type="button"
-                            class="time-button"
-                            data-time="12:00"
-                        >
+                        <button type="button" class="time-button" data-time="12:00">
                             12:00
                         </button>
 
-                        <button
-                            type="button"
-                            class="time-button"
-                            data-time="13:00"
-                        >
+                        <button type="button" class="time-button" data-time="13:00">
                             13:00
                         </button>
 
-                        <button
-                            type="button"
-                            class="time-button"
-                            data-time="14:00"
-                        >
+                        <button type="button" class="time-button" data-time="14:00">
                             14:00
                         </button>
 
-                        <button
-                            type="button"
-                            class="time-button"
-                            data-time="15:00"
-                        >
+                        <button type="button" class="time-button" data-time="15:00">
                             15:00
                         </button>
 
-                        <button
-                            type="button"
-                            class="time-button"
-                            data-time="16:00"
-                        >
+                        <button type="button" class="time-button" data-time="16:00">
                             16:00
                         </button>
 
-                        <button
-                            type="button"
-                            class="time-button"
-                            data-time="17:00"
-                        >
+                        <button type="button" class="time-button" data-time="17:00">
                             17:00
                         </button>
 
-                        <button
-                            type="button"
-                            class="time-button"
-                            data-time="18:00"
-                        >
+                        <button type="button" class="time-button" data-time="18:00">
                             18:00
                         </button>
 
-                        <button
-                            type="button"
-                            class="time-button"
-                            data-time="19:00"
-                        >
+                        <button type="button" class="time-button" data-time="19:00">
                             19:00
                         </button>
 
-                        <button
-                            type="button"
-                            class="time-button"
-                            data-time="20:00"
-                        >
+                        <button type="button" class="time-button" data-time="20:00">
                             20:00
                         </button>
 
-                        <button
-                            type="button"
-                            class="time-button"
-                            data-time="21:00"
-                        >
+                        <button type="button" class="time-button" data-time="21:00">
                             21:00
                         </button>
 
@@ -659,13 +547,8 @@
                                 Nome completo
                             </label>
 
-                            <input
-                                type="text"
-                                id="clientName"
-                                placeholder="Digite seu nome"
-                                autocomplete="name"
-                                required
-                            >
+                            <input type="text" id="clientName" placeholder="Digite seu nome" autocomplete="name"
+                                required>
 
                         </div>
 
@@ -676,13 +559,7 @@
                                 WhatsApp
                             </label>
 
-                            <input
-                                type="tel"
-                                id="clientPhone"
-                                placeholder="(27) 998662834"
-                                autocomplete="tel"
-                                required
-                            >
+                            <input type="tel" id="clientPhone" placeholder="(27) 998662834" autocomplete="tel" required>
 
                         </div>
 
@@ -691,10 +568,7 @@
 
                     <!-- ENDEREÇO MOSTRADO SOMENTE EM DOMICÍLIO -->
 
-                    <div
-                        class="address-area hidden"
-                        id="addressArea"
-                    >
+                    <div class="address-area hidden" id="addressArea">
 
                         <div class="form-grid">
 
@@ -704,11 +578,7 @@
                                     Endereço
                                 </label>
 
-                                <input
-                                    type="text"
-                                    id="clientAddress"
-                                    placeholder="Rua, número e bairro"
-                                >
+                                <input type="text" id="clientAddress" placeholder="Rua, número e bairro">
 
                             </div>
 
@@ -719,11 +589,7 @@
                                     Referência
                                 </label>
 
-                                <input
-                                    type="text"
-                                    id="reference"
-                                    placeholder="Ponto de referência"
-                                >
+                                <input type="text" id="reference" placeholder="Ponto de referência">
 
                             </div>
 
@@ -738,11 +604,8 @@
                             Observações
                         </label>
 
-                        <textarea
-                            id="observation"
-                            rows="4"
-                            placeholder="Alguma observação sobre o atendimento?"
-                        ></textarea>
+                        <textarea id="observation" rows="4"
+                            placeholder="Alguma observação sobre o atendimento?"></textarea>
 
                     </div>
 
@@ -837,10 +700,7 @@
                     </div>
 
 
-                    <button
-                        type="submit"
-                        class="whatsapp-button"
-                    >
+                    <button type="submit" class="whatsapp-button">
 
                         <span class="whatsapp-icon">
                             ◉
@@ -1023,6 +883,19 @@
                 <p>
                     Seu estilo. Nossa tecnologia.
                 </p>
+
+            </div>
+
+            <div class="footer-motivacao">
+
+                <span class="motivacao-normal">
+                    <strong>FÉ</strong>
+                </span>
+
+                <span class="motivacao-hover">
+                    "Tudo posso naquele que me fortalece."
+                    <small>Filipenses 4:13</small>
+                </span>
 
             </div>
 

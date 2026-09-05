@@ -126,6 +126,126 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+/* =========================================================
+   TEMA DIA / NOITE
+========================================================= */
+
+const themeToggle =
+    document.getElementById("themeToggle");
+
+const themeIcon =
+    document.getElementById("themeIcon");
+
+const themeText =
+    document.getElementById("themeText");
+
+
+/* =========================================================
+   CARREGAR TEMA SALVO
+========================================================= */
+
+function carregarTema() {
+
+    const temaSalvo =
+        localStorage.getItem(
+            "techBarberTema"
+        );
+
+    if (temaSalvo === "light") {
+
+        ativarTemaClaro();
+
+    } else {
+
+        ativarTemaEscuro();
+
+    }
+
+}
+
+
+/* =========================================================
+   TEMA CLARO
+========================================================= */
+
+function ativarTemaClaro() {
+
+    document.body.classList.add(
+        "light-theme"
+    );
+
+    themeIcon.textContent =
+        "☾";
+
+    themeText.textContent =
+        "Noite";
+
+    localStorage.setItem(
+        "techBarberTema",
+        "light"
+    );
+
+}
+
+
+/* =========================================================
+   TEMA ESCURO
+========================================================= */
+
+function ativarTemaEscuro() {
+
+    document.body.classList.remove(
+        "light-theme"
+    );
+
+    themeIcon.textContent =
+        "☀";
+
+    themeText.textContent =
+        "Dia";
+
+    localStorage.setItem(
+        "techBarberTema",
+        "dark"
+    );
+
+}
+
+
+/* =========================================================
+   TROCAR TEMA
+========================================================= */
+
+themeToggle.addEventListener(
+    "click",
+    () => {
+
+        const temaClaro =
+            document.body
+                .classList
+                .contains(
+                    "light-theme"
+                );
+
+        if (temaClaro) {
+
+            ativarTemaEscuro();
+
+        } else {
+
+            ativarTemaClaro();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   INICIAR TEMA
+========================================================= */
+
+carregarTema();
 
 /* =========================================================
    DATA MÍNIMA

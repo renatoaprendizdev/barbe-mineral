@@ -152,7 +152,7 @@ margin-bottom: 55px;
 .logo-area {
 display: flex;
 align-items: center;
-gap: 14px;
+gap: 10px;
 }
 
 .logo-icon {
@@ -196,6 +196,353 @@ font-size: 11px;
 text-transform: uppercase;
 
 letter-spacing: 1.5px;
+
+}
+
+/* =========================================================
+   BOTÃO TEMA DIA / NOITE
+========================================================= */
+
+.header-actions {
+    display: flex;
+      align-items: center;
+    gap: 1px;
+      margin-left: auto;
+}
+
+.theme-toggle {
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 0 13px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 50px;
+
+    background: var(--card);
+
+    color: var(--text-secondary);
+
+    font-family: inherit;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.8px;
+
+    cursor: pointer;
+
+    transition: var(--transition);
+}
+
+.theme-toggle:hover {
+    color: var(--primary);
+
+    border-color: rgba(0, 229, 160, 0.5);
+
+    transform: translateY(-1px);
+}
+
+.theme-icon {
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   TEMA CLARO
+========================================================= */
+
+body.light-theme {
+
+    --bg: #edf2f5;
+
+    --bg-secondary: #ffffff;
+
+    --card: #ffffff;
+
+    --card-light: #f4f7f9;
+
+    --border: #d8e0e6;
+
+    --border-light: #bcc8d1;
+
+    --text: #101820;
+
+    --text-secondary: #52616d;
+
+    --text-muted: #74838e;
+
+    --primary: #00a875;
+
+    --primary-dark: #00885f;
+
+    --danger: #e63946;
+
+    --warning: #db8b00;
+
+    background: #edf2f5;
+
+    color: var(--text);
+}
+
+
+/* =========================================================
+   FUNDO TEMA CLARO
+========================================================= */
+
+body.light-theme::before {
+
+    background:
+
+        radial-gradient(
+            circle at 15% 10%,
+            rgba(0, 168, 117, 0.10),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 85% 30%,
+            rgba(0, 145, 255, 0.06),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 50% 90%,
+            rgba(0, 168, 117, 0.06),
+            transparent 30%
+        );
+
+}
+
+body.light-theme .background-grid {
+
+    background-image:
+
+        linear-gradient(
+            rgba(0, 0, 0, 0.04) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.04) 1px,
+            transparent 1px
+        );
+
+}
+
+
+/* =========================================================
+   HEADER CLARO
+========================================================= */
+
+body.light-theme .header {
+
+    background:
+        rgba(255, 255, 255, 0.88);
+
+    box-shadow:
+        0 18px 50px
+        rgba(30, 50, 60, 0.10);
+}
+
+
+/* =========================================================
+   BOOKING CARD CLARO
+========================================================= */
+
+body.light-theme .booking-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.98),
+            rgba(244, 247, 249, 0.98)
+        );
+
+    box-shadow:
+        0 30px 80px
+        rgba(40, 55, 65, 0.10);
+}
+
+
+/* =========================================================
+   CARDS CLAROS
+========================================================= */
+
+body.light-theme .attendance-card,
+body.light-theme .service-card {
+
+    background: #ffffff;
+}
+
+body.light-theme .attendance-icon,
+body.light-theme .service-icon {
+
+    background: #f4f7f9;
+}
+
+
+/* =========================================================
+   INPUTS CLAROS
+========================================================= */
+
+body.light-theme input[type="date"],
+body.light-theme .form-group input,
+body.light-theme .form-group textarea {
+
+    background: #ffffff;
+
+    color: #101820;
+}
+
+body.light-theme input::placeholder,
+body.light-theme textarea::placeholder {
+
+    color: #8b98a1;
+}
+
+
+/* =========================================================
+   CALENDÁRIO CLARO
+========================================================= */
+
+body.light-theme
+input[type="date"]
+::-webkit-calendar-picker-indicator {
+
+    filter: none;
+}
+
+
+/* =========================================================
+   HORÁRIOS CLAROS
+========================================================= */
+
+body.light-theme .time-button {
+
+    background: #ffffff;
+
+    color: #52616d;
+}
+
+body.light-theme
+.time-button:disabled,
+
+body.light-theme
+.time-button.unavailable {
+
+    background:
+
+        repeating-linear-gradient(
+            135deg,
+            #eef2f4,
+            #eef2f4 5px,
+            #e5eaed 5px,
+            #e5eaed 10px
+        );
+
+}
+
+
+/* =========================================================
+   RESUMO CLARO
+========================================================= */
+
+body.light-theme .summary-card {
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(0, 168, 117, 0.08),
+            rgba(255, 255, 255, 0.8)
+        );
+}
+
+
+/* =========================================================
+   TABELA DE PREÇOS CLARA
+========================================================= */
+
+body.light-theme .price-section {
+
+    background:
+        rgba(255, 255, 255, 0.88);
+
+    box-shadow:
+        0 20px 50px
+        rgba(30, 50, 60, 0.08);
+}
+
+body.light-theme .price-table-header {
+
+    background: #f0f4f6;
+}
+
+body.light-theme .price-row {
+
+    background:
+        rgba(255, 255, 255, 0.85);
+}
+
+
+/* =========================================================
+   BOTÃO TEMA CLARO
+========================================================= */
+
+body.light-theme .theme-toggle {
+
+    background: #ffffff;
+
+    color: #52616d;
+}
+
+
+/* =========================================================
+   SCROLLBAR CLARA
+========================================================= */
+
+body.light-theme::-webkit-scrollbar-track {
+
+    background: #edf2f5;
+}
+
+body.light-theme::-webkit-scrollbar-thumb {
+
+    background: #b8c4cb;
+}
+
+
+/* =========================================================
+   RESPONSIVO HEADER
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .header-actions {
+        gap: 7px;
+    }
+
+    .theme-toggle {
+        width: 38px;
+        height: 38px;
+
+        padding: 0;
+    }
+
+    .theme-text {
+        display: none;
+    }
 
 }
 
@@ -1302,6 +1649,82 @@ letter-spacing: 1px;
 
 .footer p {
 margin-top: 4px;
+}
+/* =========================================================
+   MOTIVAÇÃO NO FOOTER
+========================================================= */
+
+.footer-motivacao {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 80px;
+    min-height: 30px;
+    margin-top: 12px;
+    cursor: default;
+}
+
+.motivacao-normal {
+    display: block;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    transition: opacity 0.3s ease;
+}
+
+.motivacao-hover {
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    transform: translateX(-50%) translateY(8px);
+
+    width: max-content;
+    max-width: 300px;
+
+    padding: 12px 16px;
+    border: 1px solid rgba(0, 229, 160, 0.35);
+    border-radius: 10px;
+
+    background: var(--card);
+    color: var(--text);
+
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        visibility 0.3s ease;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    z-index: 50;
+}
+
+.motivacao-hover small {
+    display: block;
+    margin-top: 5px;
+
+    color: var(--primary);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.footer-motivacao:hover .motivacao-normal {
+    opacity: 0;
+}
+
+.footer-motivacao:hover .motivacao-hover {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-8px);
 }
 
 /* =========================================================
